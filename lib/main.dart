@@ -42,6 +42,15 @@ class HomeScren extends StatelessWidget {
                    backgroundColor: Colors.green,
                  ),
                ),
+               SizedBox(width: 10,),
+               Column(
+                 crossAxisAlignment: CrossAxisAlignment.start,
+                 children: [
+                   Text("RaFiul RaZu",style: TextStyle(fontSize: 15,fontWeight: FontWeight.w700),),
+                   SizedBox(height: 5),
+                   Text("0182663212",style: TextStyle(fontWeight: FontWeight.w600),),
+                 ],
+               ),
              ],
            ),
 
