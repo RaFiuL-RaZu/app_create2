@@ -21,6 +21,11 @@ class MyApp extends StatelessWidget{
 class HomeScren extends StatelessWidget{
   const HomeScren({Key? key}) : super(key: key);
 
+  Mysnakbar(message,context){
+    ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text(message))
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -32,11 +37,12 @@ class HomeScren extends StatelessWidget{
       body: Center(
         child: Column(
           children: [
+            ElevatedButton(onPressed: (){Mysnakbar("Elevated Button",context);}, child:Text("Elevated Button")),
             SizedBox(
               height: 100,
             ),
             InkWell(
-              onTap: (){},
+              onTap: (){Mysnakbar("This is Elevated Button",context);},
               child: Container(
                 height: 30,
                 width: 100,
