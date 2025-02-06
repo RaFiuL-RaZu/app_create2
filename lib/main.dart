@@ -29,11 +29,14 @@ class HomeScren extends StatelessWidget{
       appBar: AppBar(
         title: Text("Home Page"),
       ),
-      body: Column(
-        children: [
-          TextButton(onPressed: (){}, child: Text("Text Button")),
-          ElevatedButton(onPressed: (){}, child: Text("Elevated")),
-        ],
+      body: Center(
+        child: Column(
+          children: [
+            TextButton(onPressed: (){}, child: Text("Text Button")),
+            ElevatedButton(onPressed: (){}, child: Text("Elevated")),
+            OutlinedButton(onPressed: (){}, child: Text("OutLine Button")),
+          ],
+        ),
       ),
     );
   }
