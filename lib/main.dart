@@ -30,30 +30,25 @@ class HomeScren extends StatelessWidget {
       appBar: AppBar(
         title: Text("Home Page"),
       ),
-      body: Center(
-        child: Column(
-          children: [
-            ElevatedButton(
-                onPressed: () {
-                  Mysnakbar("Elevated Button", context);
-                },
-                child: Text("Elevated Button")),
-            SizedBox(
-              height: 100,
+      body:ListView(
+        children: [
+          Card(
+            child: Row(
+              children: [
+                CircleAvatar(
+                  radius: 30,
+                  backgroundColor: Colors.amber,
+                ),
+                Column(
+                  children: [
+                    Text("RaFiuL RaZu"),
+                    Text("01763133766"),
+                  ],
+                )
+              ],
             ),
-
-            InkWell(
-              onTap: () {
-                Mysnakbar("This is Elevated Button", context);
-              },
-              child: Container(
-                height: 30,
-                width: 100,
-                color: Colors.orange,
-              ),
-            )
-          ],
-        ),
+          )
+        ],
       ),
     );
   }
