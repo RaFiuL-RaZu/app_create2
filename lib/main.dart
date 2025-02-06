@@ -35,16 +35,20 @@ class HomeScren extends StatelessWidget {
           Card(
             child: Row(
               children: [
-                CircleAvatar(
-                  radius: 30,
-                  backgroundColor: Colors.amber,
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: CircleAvatar(
+                    radius: 30,
+                    backgroundColor: Colors.amber,
+                  ),
                 ),
                 Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text("RaFiuL RaZu"),
+                    Text("RaFiuL RaZu",style: TextStyle(fontSize: 15,fontWeight: FontWeight.w700),),
                     Text("01763133766"),
                   ],
-                )
+                ),
               ],
             ),
           )
