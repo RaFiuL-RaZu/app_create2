@@ -32,9 +32,17 @@ class HomeScren extends StatelessWidget{
       body: Center(
         child: Column(
           children: [
-            TextButton(onPressed: (){}, child: Text("Text Button")),
-            ElevatedButton(onPressed: (){}, child: Text("Elevated")),
-            OutlinedButton(onPressed: (){}, child: Text("OutLine Button")),
+            SizedBox(
+              height: 100,
+            ),
+            InkWell(
+              onTap: (){},
+              child: Container(
+                height: 30,
+                width: 100,
+                color: Colors.orange,
+              ),
+            )
           ],
         ),
       ),
