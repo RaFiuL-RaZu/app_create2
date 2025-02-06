@@ -46,6 +46,7 @@ class HomeScren extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text("RaFiuL RaZu",style: TextStyle(fontSize: 15,fontWeight: FontWeight.w700),),
+                    SizedBox(height: 5),
                     Text("01763133766"),
                   ],
                 ),
