@@ -31,30 +31,25 @@ class HomeScren extends StatelessWidget {
         title: Text("Home Page"),
       ),
       body:ListView(
-        children: [
-          Card(
-            child: Row(
-              children: [
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: CircleAvatar(
-                    radius: 30,
-                    backgroundColor: Colors.amber,
-                  ),
-                ),
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text("RaFiuL RaZu",style: TextStyle(fontSize: 15,fontWeight: FontWeight.w700),),
-                    SizedBox(height: 5),
-                    Text("01763133766"),
-                  ],
-                ),
-              ],
-            ),
-          )
-        ],
+       children: [
+         Card(
+           child: Row(
+             children: [
+               Padding(
+                 padding: const EdgeInsets.all(8.0),
+                 child: CircleAvatar(
+                   radius: 30,
+                   backgroundColor: Colors.green,
+                 ),
+               ),
+             ],
+           ),
+
+         ),
+       ],
       ),
     );
   }
 }
+
+
