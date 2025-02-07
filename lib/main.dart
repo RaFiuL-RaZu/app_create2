@@ -18,13 +18,12 @@ class MyApp extends StatelessWidget {
 
 class HomeScren extends StatelessWidget {
    HomeScren({Key? key}) : super(key: key);
-  List<String> contactList=[
-    "Razu",
-    "Sazu",
-    "Bazu",
-    "Gazu",
-    "Fazu",
-    "Nazu",
+  List<Map> studentInfo=[
+    {"Name":"Razu","Id":"102621","Dept":"CSE"},
+    {"Name":"Sazu","Id":"102622","Dept":"CSE"},
+    {"Name":"Hazu","Id":"102623","Dept":"CSE"},
+    {"Name":"RaFi","Id":"102624","Dept":"CSE"},
+    {"Name":"RaFiul","Id":"102625","Dept":"CSE"},
   ];
 
   @override
@@ -34,9 +33,9 @@ class HomeScren extends StatelessWidget {
         title: Text("Home Page"),
       ),
       body:ListView.builder(
-        itemCount:contactList.length,
+        itemCount:studentInfo.length,
           itemBuilder:(context, index){
-            return ContactCard(name:contactList[index],phone: "018262524",);
+            return ContactCard(name:studentInfo[index]["Name"],phone:studentInfo[index]["Id"],);
           } ),
     );
   }
