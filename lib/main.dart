@@ -31,6 +31,7 @@ class HomeScren extends StatelessWidget {
         title: Text("Home Page"),
       ),
       body:ListView.builder(
+        itemCount: 5,
           itemBuilder:(context, index){
             return ContactCard(name: "Razu",phone: "018262524",);
           } ),
