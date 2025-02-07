@@ -31,6 +31,7 @@ class HomeScren extends StatelessWidget {
         title: Text("Home Page"),
       ),
       body:ListView(
+        scrollDirection: Axis.horizontal,
        children: [
          ContactCard(name:'RaFiuL' ,phone: '0182625214',),
          ContactCard(name:'RaFi' ,phone: '0182625214',),
