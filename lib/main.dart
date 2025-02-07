@@ -37,7 +37,7 @@ class HomeScren extends StatelessWidget {
          ContactCard(name:'RaFiz' ,phone: '0182625214',),
          ContactCard(name:'RaFim' ,phone: '0182625214',),
          ContactCard(name:'Sazu' ,phone: '0182625214',),
-         ContactCard(name:'SHaFin' ,phone: '0182625214',),
+         ContactCard(name:'SHaFin',phone: '0182625214',),
        ],
       ),
     );
@@ -69,7 +69,7 @@ class ContactCard extends StatelessWidget {
             children: [
               Text(name,style: TextStyle(fontSize: 15,fontWeight: FontWeight.w700),),
               SizedBox(height: 5),
-              Text(phone,style: TextStyle(fontWeight: FontWeight.w600),),
+              Text(phone),
             ],
           ),
         ],
