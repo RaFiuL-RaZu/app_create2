@@ -30,17 +30,10 @@ class HomeScren extends StatelessWidget {
       appBar: AppBar(
         title: Text("Home Page"),
       ),
-      body:ListView(
-        scrollDirection: Axis.horizontal,
-       children: [
-         ContactCard(name:'RaFiuL' ,phone: '0182625214',),
-         ContactCard(name:'RaFi' ,phone: '0182625214',),
-         ContactCard(name:'RaFiz' ,phone: '0182625214',),
-         ContactCard(name:'RaFim' ,phone: '0182625214',),
-         ContactCard(name:'Sazu' ,phone: '0182625214',),
-         ContactCard(name:'SHaFin',phone: '0182625214',),
-       ],
-      ),
+      body:ListView.builder(
+          itemBuilder:(context, index){
+            return ContactCard(name: "Razu",phone: "018262524",);
+          } ),
     );
   }
 }
