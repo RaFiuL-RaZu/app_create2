@@ -59,6 +59,7 @@ class ContactCard extends StatelessWidget {
             child: CircleAvatar(
               radius: 25,
               backgroundColor: Colors.green,
+              backgroundImage: NetworkImage("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0WxAubQyY-WaN8W-esXaxi_SfTKpjHYIf9w&s"),
             ),
           ),
           SizedBox(width: 10,),
