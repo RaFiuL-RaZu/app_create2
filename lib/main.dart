@@ -17,12 +17,15 @@ class MyApp extends StatelessWidget {
 }
 
 class HomeScren extends StatelessWidget {
-  const HomeScren({Key? key}) : super(key: key);
-
-  Mysnakbar(message, context) {
-    ScaffoldMessenger.of(context)
-        .showSnackBar(SnackBar(content: Text(message)));
-  }
+   HomeScren({Key? key}) : super(key: key);
+  List<String> contactList=[
+    "Razu",
+    "Sazu",
+    "Bazu",
+    "Gazu",
+    "Fazu",
+    "Nazu",
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -31,9 +34,9 @@ class HomeScren extends StatelessWidget {
         title: Text("Home Page"),
       ),
       body:ListView.builder(
-        itemCount: 5,
+        itemCount:contactList.length,
           itemBuilder:(context, index){
-            return ContactCard(name: "Razu",phone: "018262524",);
+            return ContactCard(name:contactList[index],phone: "018262524",);
           } ),
     );
   }
