@@ -33,7 +33,7 @@ class HomeScren extends StatelessWidget{
       ),
       body: GridView.builder(
         itemCount: 10,
-          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 3),
+          gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(maxCrossAxisExtent:120),
           itemBuilder: (context,index){
             return Card(
               color: Colors.amber,
