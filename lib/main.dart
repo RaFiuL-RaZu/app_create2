@@ -34,6 +34,7 @@ class HomeScren extends StatelessWidget{
       body: ListView(
         children: [
           Card(
+            color: Colors.orange,
             child: Row(
               children: [
                 Padding(
@@ -47,7 +48,8 @@ class HomeScren extends StatelessWidget{
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text("RaFiuL RaZu"),
+                    Text("RaFiuL RaZu",style: TextStyle(fontWeight: FontWeight.w800),),
+                    SizedBox(height: 5,),
                     Text("01826851248"),
                   ],
                 )
