@@ -21,7 +21,19 @@ class MyApp extends StatelessWidget{
 
 }
 class HomeScren extends StatelessWidget{
-  const HomeScren({Key? key}) : super(key: key);
+  HomeScren({Key? key}) : super(key: key);
+
+  List<Map> studentInfo=[
+    {"Name":"Razu","Id":"102621"},
+    {"Name":"Sazu","Id":"102621"},
+    {"Name":"Bazu","Id":"102621"},
+    {"Name":"Nazu","Id":"102621"},
+    {"Name":"Zazu","Id":"102621"},
+    {"Name":"Dazu","Id":"102621"},
+    {"Name":"Dazu","Id":"102621"},
+    {"Name":"Dazu","Id":"102621"},
+
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -31,18 +43,11 @@ class HomeScren extends StatelessWidget{
       appBar: AppBar(
         title: Text("Card View Design"),
       ),
-      body: ListView(
-        children: [
-          ContactList(name:"RaFi" ,phone:"01632212211" ,),
-          ContactList(name:"RaFiuL",phone: "01632212211",),
-          ContactList(name:"Sazu" ,phone: "01632212211",),
-          ContactList(name:"Razu" ,phone:"01632212211" ,),
-          ContactList(name: "SaFin",phone: "01632212211",),
-          ContactList(name: "Sazid",phone: "01632212211",),
-
-
-        ],
-      )
+      body: ListView.builder(
+        itemCount: studentInfo.length,
+          itemBuilder: (context,index){
+            return ContactList(name:studentInfo[index]["Name"], phone:studentInfo[index]["Id"],);
+          })
     );
   }
 
