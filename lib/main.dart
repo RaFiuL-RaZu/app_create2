@@ -37,15 +37,9 @@ class HomeScren extends StatelessWidget{
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: CircleAvatar(
-                backgroundColor: Colors.teal,
+                radius: 25,
+                backgroundColor: Colors.deepOrangeAccent,
               ),
-            ),
-            SizedBox(width: 10),
-            Column(
-              children: [
-                Text("RaFiuL RaZu"),
-                Text("0182621543"),
-              ],
             )
           ],
         ),
