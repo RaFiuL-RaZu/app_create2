@@ -31,29 +31,31 @@ class HomeScren extends StatelessWidget{
       appBar: AppBar(
         title: Text("Card View Design"),
       ),
-      body: Card(
-        child: Row(
-          children: [
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: CircleAvatar(
-                radius: 25,
-                backgroundColor: Colors.green,
-                backgroundImage: NetworkImage("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0WxAubQyY-WaN8W-esXaxi_SfTKpjHYIf9w&s"),
-              ),
-            ),
-            SizedBox(width: 10,),
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
+      body: ListView(
+        children: [
+          Card(
+            child: Row(
               children: [
-                Text("Razu",style: TextStyle(fontSize: 15,fontWeight: FontWeight.w700),),
-                SizedBox(height: 5),
-                Text("018265214"),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: CircleAvatar(
+                    radius: 25,
+                    backgroundColor: Colors.green,
+                  ),
+                ),
+                SizedBox(width: 10,),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text("RaFiuL RaZu"),
+                    Text("01826851248"),
+                  ],
+                )
               ],
             ),
-          ],
-        ),
-      ),
+          ),
+        ],
+      )
     );
   }
 
