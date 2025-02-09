@@ -34,6 +34,9 @@ class HomeScren extends StatelessWidget{
       body: GridView(
           gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 2,
+            crossAxisSpacing: 10,
+            mainAxisSpacing: 10,
+
           ),
         children: [
           Card(
