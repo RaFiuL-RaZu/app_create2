@@ -38,9 +38,19 @@ class HomeScren extends StatelessWidget{
               padding: const EdgeInsets.all(8.0),
               child: CircleAvatar(
                 radius: 25,
-                backgroundColor: Colors.deepOrangeAccent,
+                backgroundColor: Colors.green,
+                backgroundImage: NetworkImage("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0WxAubQyY-WaN8W-esXaxi_SfTKpjHYIf9w&s"),
               ),
-            )
+            ),
+            SizedBox(width: 10,),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text("Razu",style: TextStyle(fontSize: 15,fontWeight: FontWeight.w700),),
+                SizedBox(height: 5),
+                Text("018265214"),
+              ],
+            ),
           ],
         ),
       ),
