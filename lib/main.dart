@@ -40,7 +40,7 @@ class HomeScren extends StatelessWidget{
           ),
         children: [
           Card(
-            color: Colors.amber,
+            color: Colors.green,
             child: SizedBox(
               height: 50,
               width: 50,
