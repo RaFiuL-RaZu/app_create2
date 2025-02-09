@@ -23,69 +23,66 @@ class MyApp extends StatelessWidget{
 class HomeScren extends StatelessWidget{
   HomeScren({Key? key}) : super(key: key);
 
-  List<Map> studentInfo=[
-    {"Name":"Razu","Id":"102621"},
-    {"Name":"Sazu","Id":"102621"},
-    {"Name":"Bazu","Id":"102621"},
-    {"Name":"Nazu","Id":"102621"},
-    {"Name":"Zazu","Id":"102621"},
-    {"Name":"Dazu","Id":"102621"},
-    {"Name":"Dazu","Id":"102621"},
-    {"Name":"Dazu","Id":"102621"},
-
-  ];
-
   @override
   Widget build(BuildContext context) {
 
 
     return Scaffold(
       appBar: AppBar(
-        title: Text("Card View Design"),
+        title: Text("Gird View Design"),
       ),
-      body: ListView.builder(
-        itemCount: studentInfo.length,
-          itemBuilder: (context,index){
-            return ContactList(name:studentInfo[index]["Name"], phone:studentInfo[index]["Id"],);
-          })
-    );
-  }
-
-
-}
-
-class ContactList extends StatelessWidget {
-  ContactList({
-    Key? key,required this.name, required this.phone,
-  }) : super(key: key);
-  final String name;
-  final String phone;
-
-  @override
-  Widget build(BuildContext context) {
-    return Card(
-      color: Colors.white,
-      child: Row(
+      body: GridView(
+          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+            crossAxisCount: 2,
+          ),
         children: [
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: CircleAvatar(
-              radius: 25,
-              backgroundColor:Colors.white,
-              backgroundImage: NetworkImage("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBQcRtWVDjSpn8k9DDCETUsh-LL3HVJGDMaQ&s"),
+          Card(
+            color: Colors.amber,
+            child: SizedBox(
+              height: 50,
+              width: 50,
+              child: Center(child: Text("Razu")),
             ),
           ),
-          SizedBox(width: 10,),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(name,style: TextStyle(fontWeight: FontWeight.w800),),
-              SizedBox(height: 5,),
-              Text(phone),
-            ],
-          )
+          Card(
+            color: Colors.amber,
+            child: SizedBox(
+              height: 50,
+              width: 50,
+              child: Center(child: Text("Razu")),
+            ),
+          ),
+          Card(
+            color: Colors.amber,
+            child: SizedBox(
+              height: 50,
+              width: 50,
+              child: Center(child: Text("Razu")),
+            ),
+          ),
+          Card(
+            color: Colors.amber,
+            child: SizedBox(
+              height: 50,
+              width: 50,
+              child: Center(child: Text("Razu")),
+            ),
+          ),
+          Card(
+            color: Colors.amber,
+            child: SizedBox(
+              height: 50,
+              width: 50,
+              child: Center(child: Text("Razu")),
+            ),
+          ),
+
         ],
       ),
     );
   }
+
+
 }
+
+
