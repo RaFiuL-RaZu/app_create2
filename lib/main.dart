@@ -31,61 +31,21 @@ class HomeScren extends StatelessWidget{
       appBar: AppBar(
         title: Text("Gird View Design"),
       ),
-      body: GridView(
-        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-          crossAxisCount: 3,
-        ),
-        children: [
-          Card(
-            color: Colors.green,
-            child: SizedBox(
-              height: 100,
-              width: 100,
-              child: Text("GridView"),
-            ),
+      body: GridView.builder(
+          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+            crossAxisCount: 3
           ),
-          Card(
-            color: Colors.green,
-            child: SizedBox(
-              height: 100,
-              width: 100,
-              child: Text("GridView"),
-            ),
-          ),
-          Card(
-            color: Colors.green,
-            child: SizedBox(
-              height: 100,
-              width: 100,
-              child: Text("GridView"),
-            ),
-          ),
-          Card(
-            color: Colors.green,
-            child: SizedBox(
-              height: 100,
-              width: 100,
-              child: Text("GridView"),
-            ),
-          ),
-          Card(
-            color: Colors.green,
-            child: SizedBox(
-              height: 100,
-              width: 100,
-              child: Text("GridView"),
-            ),
-          ),
-          Card(
-            color: Colors.green,
-            child: SizedBox(
-              height: 100,
-              width: 100,
-              child: Text("GridView"),
-            ),
-          ),
-          
-        ],
+          itemBuilder:(context,index){
+            return Card(
+              color: Colors.green,
+              child: SizedBox(
+                height: 100,
+                width: 100,
+                child: Text("GridView"),
+              ),
+            );
+          }
+      ),
 
       ),
     );
