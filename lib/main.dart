@@ -23,6 +23,20 @@ class MyApp extends StatelessWidget{
 class HomeScren extends StatelessWidget{
   HomeScren({Key? key}) : super(key: key);
 
+  List<Map> studentInfo=[
+    {"name":"Razu","dept":"CSE","Id":"102621"},
+    {"name":"Sazu","dept":"CE","Id":"102621"},
+    {"name":"RaFi","dept":"MME","Id":"102621"},
+    {"name":"RaKi","dept":"EEE","Id":"102621"},
+    {"name":"Raz","dept":"TE","Id":"102621"},
+    {"name":"Raz","dept":"TE","Id":"102621"},
+    {"name":"Raz","dept":"TE","Id":"102621"},
+    {"name":"Raz","dept":"TE","Id":"102621"},
+    {"name":"Raz","dept":"TE","Id":"102621"},
+    {"name":"Raz","dept":"TE","Id":"102621"},
+
+  ];
+
   @override
   Widget build(BuildContext context) {
 
@@ -39,7 +53,7 @@ class HomeScren extends StatelessWidget{
             GridView.builder(
               shrinkWrap: true,
                 physics: NeverScrollableScrollPhysics(),
-                itemCount: 20,
+                itemCount: studentInfo.length,
                 gridDelegate:SliverGridDelegateWithMaxCrossAxisExtent(
                   maxCrossAxisExtent: 150,
                   mainAxisSpacing: 10,
@@ -51,7 +65,19 @@ class HomeScren extends StatelessWidget{
                     child: SizedBox(
                       height: 100,
                       width: 100,
-                      child: Center(child: Text("GridView")),
+                      child: Center(
+                        child: Center(
+                          child: Column(
+                            children: [
+                              Center(child: Text(studentInfo[index]["name"])),
+                              Center(child: Text(studentInfo[index]["dept"])),
+                              Center(child: Text(studentInfo[index]["Id"])),
+
+                            ],
+                          ),
+                        ),
+                      ),
+
                     ),
                   );
                 }
