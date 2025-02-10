@@ -50,37 +50,40 @@ class HomeScren extends StatelessWidget{
               width: double.infinity,
               color: Colors.red,
             ),
-            GridView.builder(
-              shrinkWrap: true,
-                physics: NeverScrollableScrollPhysics(),
-                itemCount: studentInfo.length,
-                gridDelegate:SliverGridDelegateWithMaxCrossAxisExtent(
-                  maxCrossAxisExtent: 150,
-                  mainAxisSpacing: 10,
-                  crossAxisSpacing: 10,
-                ),
-                itemBuilder:(context,index){
-                  return Card(
-                    color: Colors.green,
-                    child: SizedBox(
-                      height: 100,
-                      width: 100,
-                      child: Center(
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: GridView.builder(
+                shrinkWrap: true,
+                  physics: NeverScrollableScrollPhysics(),
+                  itemCount: studentInfo.length,
+                  gridDelegate:SliverGridDelegateWithMaxCrossAxisExtent(
+                    maxCrossAxisExtent: 150,
+                    mainAxisSpacing: 10,
+                    crossAxisSpacing: 10,
+                  ),
+                  itemBuilder:(context,index){
+                    return Card(
+                      color: Colors.green,
+                      child: SizedBox(
+                        height: 100,
+                        width: 100,
                         child: Center(
-                          child: Column(
-                            children: [
-                              Center(child: Text(studentInfo[index]["name"])),
-                              Center(child: Text(studentInfo[index]["dept"])),
-                              Center(child: Text(studentInfo[index]["Id"])),
+                          child: Center(
+                            child: Column(
+                              children: [
+                                Center(child: Text(studentInfo[index]["name"])),
+                                Center(child: Text(studentInfo[index]["dept"])),
+                                Center(child: Text(studentInfo[index]["Id"])),
 
-                            ],
+                              ],
+                            ),
                           ),
                         ),
-                      ),
 
-                    ),
-                  );
-                }
+                      ),
+                    );
+                  }
+              ),
             ),
           ],
 
