@@ -31,33 +31,62 @@ class HomeScren extends StatelessWidget{
       appBar: AppBar(
         title: Text("Gird View Design"),
       ),
-      body:Column(
+      body: GridView(
+        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+          crossAxisCount: 3,
+        ),
         children: [
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Container(
+          Card(
+            color: Colors.green,
+            child: SizedBox(
               height: 100,
-              width:double.infinity,
-              color: Colors.green,
+              width: 100,
+              child: Text("GridView"),
             ),
           ),
-          GridView.builder(
-            shrinkWrap: true,
-            physics: NeverScrollableScrollPhysics,
-            itemCount: 10,
-            gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(maxCrossAxisExtent:120),
-            itemBuilder: (context,index){
-              return Card(
-                color: Colors.amber,
-                child: SizedBox(
-                  height: 50,
-                  width: 50,
-                  child: Center(child: Text("Razu")),
-                ),
-              );
-            },
+          Card(
+            color: Colors.green,
+            child: SizedBox(
+              height: 100,
+              width: 100,
+              child: Text("GridView"),
+            ),
           ),
+          Card(
+            color: Colors.green,
+            child: SizedBox(
+              height: 100,
+              width: 100,
+              child: Text("GridView"),
+            ),
+          ),
+          Card(
+            color: Colors.green,
+            child: SizedBox(
+              height: 100,
+              width: 100,
+              child: Text("GridView"),
+            ),
+          ),
+          Card(
+            color: Colors.green,
+            child: SizedBox(
+              height: 100,
+              width: 100,
+              child: Text("GridView"),
+            ),
+          ),
+          Card(
+            color: Colors.green,
+            child: SizedBox(
+              height: 100,
+              width: 100,
+              child: Text("GridView"),
+            ),
+          ),
+          
         ],
+
       ),
     );
   }
