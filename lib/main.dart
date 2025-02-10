@@ -28,35 +28,37 @@ class HomeScren extends StatelessWidget{
 
 
     return Scaffold(
-      body:Column(
-        children: [
-          Container(
-            height: 150,
-            width: double.infinity,
-            color: Colors.red,
-          ),
-          GridView.builder(
-            shrinkWrap: true,
-              physics: NeverScrollableScrollPhysics(),
-              itemCount: 10,
-              gridDelegate:SliverGridDelegateWithMaxCrossAxisExtent(
-                maxCrossAxisExtent: 150,
-                mainAxisSpacing: 10,
-                crossAxisSpacing: 10,
-              ),
-              itemBuilder:(context,index){
-                return Card(
-                  color: Colors.green,
-                  child: SizedBox(
-                    height: 100,
-                    width: 100,
-                    child: Center(child: Text("GridView")),
-                  ),
-                );
-              }
-          ),
-        ],
+      body:SingleChildScrollView(
+        child: Column(
+          children: [
+            Container(
+              height: 150,
+              width: double.infinity,
+              color: Colors.red,
+            ),
+            GridView.builder(
+              shrinkWrap: true,
+                physics: NeverScrollableScrollPhysics(),
+                itemCount: 20,
+                gridDelegate:SliverGridDelegateWithMaxCrossAxisExtent(
+                  maxCrossAxisExtent: 150,
+                  mainAxisSpacing: 10,
+                  crossAxisSpacing: 10,
+                ),
+                itemBuilder:(context,index){
+                  return Card(
+                    color: Colors.green,
+                    child: SizedBox(
+                      height: 100,
+                      width: 100,
+                      child: Center(child: Text("GridView")),
+                    ),
+                  );
+                }
+            ),
+          ],
 
+        ),
       ),
     );
   }
