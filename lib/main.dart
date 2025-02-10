@@ -29,24 +29,15 @@ class HomeScren extends StatelessWidget{
 
 
     return Scaffold(
-      body:Stack(
-        clipBehavior: Clip.none,
-          children: [
-            Container(
-              height: 200,
-              width:double.infinity,
-              color: Colors.red,
-              child: Text("DaTa"),
-            ),
-            Positioned(
-              bottom: -40,
-                left: 30,
-                child:CircleAvatar(
-                  radius: 40,
-                  backgroundColor: Colors.green,
-                )),
-          ],
-        ),
+      body:Column(
+        children: [
+          Container(
+            height: 200,
+            width: double.infinity,
+            color: Colors.orangeAccent,
+          ),
+        ],
+      ),
     );
   }
 
