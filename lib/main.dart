@@ -32,6 +32,8 @@ class HomeScren extends StatelessWidget{
         itemCount: 10,
           gridDelegate:SliverGridDelegateWithMaxCrossAxisExtent(
               maxCrossAxisExtent: 150,
+            mainAxisSpacing: 10,
+            crossAxisSpacing: 10,
           ),
           itemBuilder:(context,index){
             return Card(
