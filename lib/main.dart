@@ -28,13 +28,8 @@ class HomeScren extends StatelessWidget{
 
 
     return Scaffold(
-      appBar: AppBar(
-        title: Text("Gird View Design"),
-      ),
       body: GridView.builder(
-          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 3
-          ),
+          gridDelegate:SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 3),
           itemBuilder:(context,index){
             return Card(
               color: Colors.green,
@@ -45,8 +40,6 @@ class HomeScren extends StatelessWidget{
               ),
             );
           }
-      ),
-
       ),
     );
   }
