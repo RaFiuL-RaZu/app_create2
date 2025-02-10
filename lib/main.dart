@@ -29,6 +29,7 @@ class HomeScren extends StatelessWidget{
 
     return Scaffold(
       body: GridView.builder(
+        itemCount: 10,
           gridDelegate:SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 3),
           itemBuilder:(context,index){
             return Card(
